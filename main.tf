@@ -5,6 +5,12 @@ terraform {
       version = "4.25.0"
     }
   }
+  backend "azurerm" {
+    resource_group_name  = "tfstate-rg"
+    storage_account_name = "tfstate123456"  # Сложи реално име
+    container_name       = "tfstate"
+    key                  = "terraform.tfstate"
+  }
 }
 
 provider "azurerm" {
