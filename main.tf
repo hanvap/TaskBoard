@@ -6,9 +6,9 @@ terraform {
     }
   }
   backend "azurerm" {
-    resource_group_name  = "tfstate-rg"
-    storage_account_name = "tfstate123456"  # Сложи реално име
-    container_name       = "tfstate"
+    resource_group_name  = "StorageRGveso"
+    storage_account_name = "taskboardstorageveso"
+    container_name       = "taskboardstoragevesoc"
     key                  = "terraform.tfstate"
   }
 }
